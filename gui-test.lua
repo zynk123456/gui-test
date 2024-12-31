@@ -1,6 +1,6 @@
 assert(Drawing, 'exploit not supported')
 
-if not syn and not PROTOSMASHER_LOADED then print'Unnamed ESP only officially supports Synapse and Protosmasher! If you\'re an exploit developer and have added drawing API to your exploit, try setting syn as true then checking if that works, otherwise, DM me on discord @ cppbook.org#1968 or add an issue to the Unnamed ESP Github Repository and I\'ll see it through email!' end
+if not syn and not PROTOSMASHER_LOADED then print'ZynkESP only officially supports Synapse and Protosmasher! If you\'re an exploit developer and have added drawing API to your exploit, try setting syn as true then checking if that works, otherwise, DM me on discord @ cppbook.org#1968 or add an issue to the Unnamed ESP Github Repository and I\'ll see it through email!' end
 
 if not cloneref then cloneref = function(o) return o end end
 
@@ -19,7 +19,7 @@ local WorldToViewport = function(...) return WTVP(Camera, ...) end
 local Menu = {}
 local MouseHeld = false
 local LastRefresh = 0
-local OptionsFile = 'IC3_ESP_SETTINGS.dat'
+local OptionsFile = 'Zynk_ESP_SETTINGS.dat'
 local Binding = false
 local BindedKey = nil
 local OIndex = 0
@@ -50,7 +50,7 @@ local QUAD_SUPPORTED_EXPLOIT = pcall(function() Drawing.new('Quad'):Remove() end
 
 shared.MenuDrawingData = shared.MenuDrawingData or { Instances = {} }
 shared.InstanceData = shared.InstanceData or {}
-shared.RSName = shared.RSName or ('ZynkESP' .. HttpService:GenerateGUID(false))
+shared.RSName = shared.RSName or ('ZynkESP_by_zynk' .. HttpService:GenerateGUID(false))
 
 local GetDataName = shared.RSName .. '-GetData'
 local UpdateName = shared.RSName .. '-Update'
@@ -1606,7 +1606,7 @@ function CreateMenu(NewPosition) -- Create Menu
 	Menu:AddMenuInstance('TopBarTextBR', 'Text', {
 		Size 		= 18;
 		Position	= shared.MenuDrawingData.Instances.TopBarTwo.Position + V2New(BaseSize.X - 75, 25);
-		Text		= '';
+		Text		= 'by zynk';
 		Color		= Colors.Secondary.Light;
 		Visible		= true;
 		Transparency= 1;
