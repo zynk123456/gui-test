@@ -1,57 +1,63 @@
--- Create the GUI
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+-- Create the ScreenGui object
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-local Frame = Instance.new("Frame")
-Frame.Size = UDim2.new(0, 300, 0, 200)
-Frame.Position = UDim2.new(0.5, -150, 0.5, -100)
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Parent = ScreenGui
+-- Create a frame for the GUI window
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 300, 0, 200) -- Size of the window
+mainFrame.Position = UDim2.new(0.5, -150, 0.5, -100) -- Center the window
+mainFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+mainFrame.Parent = screenGui
 
-local Title = Instance.new("TextLabel")
-Title.Size = UDim2.new(0, 300, 0, 50)
-Title.Position = UDim2.new(0, 0, 0, 0)
-Title.Text = "zynk gui"
-Title.TextSize = 24
-Title.TextColor3 = Color3.fromRGB(0, 0, 0)
-Title.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
-Title.Parent = Frame
+-- Add a title label to the GUI
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(0, 300, 0, 40)
+titleLabel.Position = UDim2.new(0, 0, 0, 0)
+titleLabel.BackgroundTransparency = 1
+titleLabel.Text = "Zynk GUI"
+titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+titleLabel.TextSize = 24
+titleLabel.TextAlign = Enum.TextAnchor.MiddleCenter
+titleLabel.Parent = mainFrame
 
--- Button 1
-local Button1 = Instance.new("TextButton")
-Button1.Size = UDim2.new(0, 200, 0, 50)
-Button1.Position = UDim2.new(0.5, -100, 0, 60)
-Button1.Text = "Button 1"
-Button1.TextSize = 18
-Button1.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-Button1.Parent = Frame
+-- Create Button 1
+local button1 = Instance.new("TextButton")
+button1.Size = UDim2.new(0, 260, 0, 40)
+button1.Position = UDim2.new(0, 20, 0, 50)
+button1.Text = "Button 1"
+button1.TextColor3 = Color3.fromRGB(255, 255, 255)
+button1.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+button1.TextSize = 18
+button1.Parent = mainFrame
 
-Button1.MouseButton1Click:Connect(function()
+button1.MouseButton1Click:Connect(function()
     print("Button 1 clicked!")
 end)
 
--- Button 2
-local Button2 = Instance.new("TextButton")
-Button2.Size = UDim2.new(0, 200, 0, 50)
-Button2.Position = UDim2.new(0.5, -100, 0, 120)
-Button2.Text = "Button 2"
-Button2.TextSize = 18
-Button2.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
-Button2.Parent = Frame
+-- Create Button 2
+local button2 = Instance.new("TextButton")
+button2.Size = UDim2.new(0, 260, 0, 40)
+button2.Position = UDim2.new(0, 20, 0, 100)
+button2.Text = "Button 2"
+button2.TextColor3 = Color3.fromRGB(255, 255, 255)
+button2.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+button2.TextSize = 18
+button2.Parent = mainFrame
 
-Button2.MouseButton1Click:Connect(function()
+button2.MouseButton1Click:Connect(function()
     print("Button 2 clicked!")
 end)
 
--- Button 3
-local Button3 = Instance.new("TextButton")
-Button3.Size = UDim2.new(0, 200, 0, 50)
-Button3.Position = UDim2.new(0.5, -100, 0, 180)
-Button3.Text = "Button 3"
-Button3.TextSize = 18
-Button3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-Button3.Parent = Frame
+-- Create Button 3
+local button3 = Instance.new("TextButton")
+button3.Size = UDim2.new(0, 260, 0, 40)
+button3.Position = UDim2.new(0, 20, 0, 150)
+button3.Text = "Button 3"
+button3.TextColor3 = Color3.fromRGB(255, 255, 255)
+button3.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+button3.TextSize = 18
+button3.Parent = mainFrame
 
-Button3.MouseButton1Click:Connect(function()
+button3.MouseButton1Click:Connect(function()
     print("Button 3 clicked!")
 end)
